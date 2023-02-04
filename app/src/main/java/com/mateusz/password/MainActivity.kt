@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             passwordMatching.isChecked = a == b
             capitalLetter.isChecked = a.any { it.isUpperCase() }
             smallLetter.isChecked = a.any { it.isLowerCase() }
-
+            numberIncluded.isChecked = a.any { it.isDigit() }
         }
 
     }

@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             capitalLetter.isChecked = a.any { it.isUpperCase() }
             smallLetter.isChecked = a.any { it.isLowerCase() }
             numberIncluded.isChecked = a.any { it.isDigit() }
+            specialIncluded.isChecked = a.any { !it.isLetterOrDigit() }
         }
 
     }

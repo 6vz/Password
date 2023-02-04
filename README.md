@@ -5,7 +5,7 @@ Projekt ten został wykonany na Lekcję.
 ## Licencja
 Zobacz plik `LICENSE` po więcej detali
 
-##Uruchamianie
+## Uruchamianie
 1. Odpal w android studio
 
 Made with ❤️ by Matt :)

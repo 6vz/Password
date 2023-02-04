@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         val specialIncluded = findViewById<CheckBox>(R.id.specialIncluded)
 
         button.setOnClickListener() {
+            val a = inputA.text.toString()
+            val b = inputB.text.toString()
+
+            passwordMatching.isChecked = a == b
+            capitalLetter.isChecked = a.any { it.isUpperCase() }
 
         }
 

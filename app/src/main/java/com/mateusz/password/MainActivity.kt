@@ -40,17 +40,20 @@ class MainActivity : AppCompatActivity() {
             specialIncluded.isChecked = a.any { !it.isLetterOrDigit() }
 
             if (passwordMatching.isChecked && capitalLetter.isChecked && smallLetter.isChecked && numberIncluded.isChecked && specialIncluded.isChecked) {
-                val builder = android.app.AlertDialog.Builder(this)
-                builder.setTitle("Spełniono wszystkie wymagania")
-                builder.setMessage("Hasło spełnia wszystkie wymagania. Możesz bezpiecznie używać tego hasła")
-                builder.setPositiveButton("OK", null)
-                builder.show()
+//                val builder = android.app.AlertDialog.Builder(this)
+//                builder.setTitle("Spełniono wszystkie wymagania")
+//                builder.setMessage("Hasło spełnia wszystkie wymagania. Możesz bezpiecznie używać tego hasła")
+//                builder.setPositiveButton("OK", null)
+//                builder.show()
+                android.widget.Toast.makeText(this, "Hasło spełnia wszystkie wymagania. Możesz bezpiecznie używać tego hasła", android.widget.Toast.LENGTH_LONG).show()
             } else {
-                val builder = android.app.AlertDialog.Builder(this)
-                builder.setTitle("Nie spełniono wszystkich wymagań")
-                builder.setMessage("Hasło nie spełnia wszystkich wymagań. Zalecamy zmianę hasła według zaleceń. ")
-                builder.setPositiveButton("OK", null)
-                builder.show()
+//                val builder = android.app.AlertDialog.Builder(this)
+//                builder.setTitle("Nie spełniono wszystkich wymagań")
+//                builder.setMessage("Hasło nie spełnia wszystkich wymagań. Zalecamy zmianę hasła według zaleceń. ")
+//                builder.setPositiveButton("OK", null)
+//                builder.show()
+                // display toast on the middle of the screen
+                android.widget.Toast.makeText(this, "Hasło nie spełnia wszystkich wymagań. Zalecamy zmianę hasła według zaleceń.", android.widget.Toast.LENGTH_LONG).show()
             }
         }
 

@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <CheckBox
-        android:id="@+id/passwordMatching2"
+        android:id="@+id/passwordMatching"
         android:layout_width="242dp"
         android:layout_height="52dp"
         android:clickable="false"
@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.715" />
 
     <CheckBox
-        android:id="@+id/numberIncluded2"
+        android:id="@+id/numberIncluded"
         android:layout_width="242dp"
         android:layout_height="52dp"
         android:clickable="false"

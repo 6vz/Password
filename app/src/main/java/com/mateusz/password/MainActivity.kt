@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val inputA = findViewById<EditText>(R.id.inputA)
         val inputB = findViewById<EditText>(R.id.inputB)
         val button = findViewById<Button>(R.id.button)
+        val showEvent = findViewById<TextView>(R.id.showPassHandle)
 
         val passwordMatching = findViewById<CheckBox>(R.id.passwordMatching)
         val capitalLetter = findViewById<CheckBox>(R.id.capitalLetter)
@@ -30,6 +32,12 @@ class MainActivity : AppCompatActivity() {
             if (a.isEmpty() || b.isEmpty()) {
                 inputA.error = "Pole nie może być puste"
                 inputB.error = "Pole nie może być puste"
+                return@setOnClickListener
+            }
+
+            if (a != b) {
+                inputA.error = "Hasła nie są takie same"
+                inputB.error = "Hasła nie są takie same"
                 return@setOnClickListener
             }
 
@@ -54,5 +62,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        showEvent.setOnClickListener {
+            if (showEvent.text == "Pokaż hasło") {
+                inputA.transformationMethod = null
+                inputB.transformationMethod = null
+                showEvent.text = "Ukryj hasło"
+            } else {
+                inputA.transformationMethod = android.text.method.PasswordTransformationMethod()
+                inputB.transformationMethod = android.text.method.PasswordTransformationMethod()
+                showEvent.text = "Pokaż hasło"
+            }
+        }
     }
 }
